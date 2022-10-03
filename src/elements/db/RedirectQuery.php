@@ -40,12 +40,12 @@ class RedirectQuery extends ElementQuery
 
     public $count;
 
-    public $status;
+    public array|string|null $status;
 
     /**
      * @inheritdoc
      */
-    public function init()
+    public function init(): void
     {
         if ($this->withStructure === null) {
             $this->withStructure = true;
@@ -59,7 +59,7 @@ class RedirectQuery extends ElementQuery
      *
      * @return $this|ElementQuery
      */
-    public function id($id)
+    public function id(mixed $id): \craft\elements\db\ElementQuery
     {
         $this->id = $id;
 

@@ -40,7 +40,7 @@ class ChangePermanentMethod extends ElementAction
     /**
      * @inheritdoc
      */
-    public function getConfirmationMessage()
+    public function getConfirmationMessage(): ?string
     {
         return $this->confirmationMessage;
     }

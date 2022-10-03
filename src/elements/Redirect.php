@@ -285,7 +285,7 @@ class Redirect extends Element
         return $actions;
     }
 
-    public function init()
+    public function init(): void
     {
         $this->setScenario(Model::SCENARIO_DEFAULT);
 
@@ -307,7 +307,7 @@ class Redirect extends Element
      *
      * @return string
      */
-    public function __toString()
+    public function __toString(): string
     {
         if ($this->oldUrl) {
             return (string)$this->oldUrl;
@@ -331,7 +331,7 @@ class Redirect extends Element
      * @throws SiteNotFoundException
      * @throws InvalidConfigException
      */
-    public function getCpEditUrl()
+    public function getCpEditUrl(): ?string
     {
         $pluginHandle = Craft::$app->getSession()->get('sprout.redirects.pluginHandle');
 
@@ -408,7 +408,7 @@ class Redirect extends Element
      * @inheritdoc
      * @throws Exception if reasons
      */
-    public function afterSave(bool $isNew)
+    public function afterSave(bool $isNew): void
     {
         $settings = SproutBaseRedirects::$app->settings->getRedirectsSettings();
 

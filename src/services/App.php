@@ -21,7 +21,7 @@ class App extends Component
      */
     public $settings;
 
-    public function init()
+    public function init(): void
     {
         $this->redirects = new Redirects();
         $this->settings = new Settings();

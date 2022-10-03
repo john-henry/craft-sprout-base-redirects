@@ -32,7 +32,7 @@ class RedirectsController extends SharedController
      * @throws MissingComponentException
      * @throws InvalidConfigException
      */
-    public function init()
+    public function init(): void
     {
         parent::init();
 

@@ -34,7 +34,7 @@ class DeleteSoftDeletedRedirects extends BaseJob
      * @return bool
      * @throws Throwable
      */
-    public function execute($queue): bool
+    public function execute($queue): void
     {
         // Get all Soft Deleted Redirects. We are removing support for Soft Deletes.
         $redirects = (new Query())
